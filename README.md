@@ -8,6 +8,7 @@ document set (e.g Terms & Conditions, Privacy Policies, Legal Contracts).
 
 ## Flow and Architecture
 
+![RAG Application](https://github.com/user-attachments/assets/db4d3462-34a6-4c38-9202-829cc50a5833)
 
 Architecture of a RAG Application:
 
@@ -75,5 +76,17 @@ And run below command.
 ```
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Terminal](https://github.com/user-attachments/assets/cd72c44f-195b-4702-aee0-36e347fa488f)
+![Chatbot UI](https://github.com/user-attachments/assets/a90d183a-3fbe-4e50-9587-0da599ed692d)
+![Processing User Query](https://github.com/user-attachments/assets/35fb8929-bbfb-4eb5-81d4-d8c77a648379)
+![Output 1st query](https://github.com/user-attachments/assets/2e9f60d0-519a-43bc-9cd6-e2f4cbde1bf7)
+![Output 2st query](https://github.com/user-attachments/assets/7dd4c139-f87e-44f2-a1d5-b4fd3ac15dae)
+![Output 3st query](https://github.com/user-attachments/assets/9f1eb98e-d8ec-4540-8b09-4cbc14fc2d4b)
+
+## Authors
+
+- Ashutosh Sharma
+    - [Linkedin](https://www.linkedin.com/in/ashutosh-sharma28/)
+    - [Github](https://github.com/btw-ImAsh)
+
 
