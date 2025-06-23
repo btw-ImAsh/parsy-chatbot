@@ -57,7 +57,6 @@ except Exception as e:
     st.error(f"Failed to load chunks.pkl: {e}")
     st.stop()
 
-
 with st.sidebar:
     st.title("🔍 Parsy: A RAG Chatbot")
     st.write("Model: `Llama-3-8B-Instruct`")
@@ -80,10 +79,11 @@ if user_query:
     st.chat_message('user').markdown(user_query)
     st.session_state.messages.append({'role': 'user', 'content': user_query})
     try:
-        with st.spinner("Generating answer..."):
-            response = generate_answers(user_query)
+        with st.spinner('Generating Answer...'):
+            with st.chat_message("assistant"):
+                stream_response = generate_answers(user_query)
+                response = st.write_stream(stream_response)
     except Exception as e:
         response = f"❌ Error while generating response: {e}"
         st.error(response)
-    st.chat_message('assistant').markdown(response)
     st.session_state.messages.append({'role':'assistant', 'content': response})

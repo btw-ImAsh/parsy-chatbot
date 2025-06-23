@@ -2,6 +2,7 @@ from langchain_community.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
 import requests
 import warnings
+import json
 
 warnings.filterwarnings("ignore",category=DeprecationWarning)
 
@@ -15,11 +16,14 @@ try:
             json={
                 "model": "llama3:instruct",
                 "prompt": prompt,
-                "stream": False
-            }
+                "stream": True
+            },
+            stream=True
         )
-        data = response.json()
-        return data['response']
+        for sent in response.iter_lines():
+            if sent:
+                data = json.loads(sent.decode("utf-8"))
+                yield data.get("response", "")
 except Exception as e:
     print(f"Failed to run Llama 3 Instruct: {e}")
 
